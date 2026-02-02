@@ -5,4 +5,4 @@ This repository contains my master resume data and the automation logic for gene
 - **Automation:** n8n
 - **AI Model:** Llama3 (Ollama)
 - **Infrastructure:** Proxmox LXC
-- **Storage:** Ubuntu VM Nextcloud
+- **Storage:** Nextcloud
