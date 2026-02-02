@@ -1,32 +1,65 @@
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
-    color: #333;
-    max-width: 800px;
+    font-family: 'Helvetica', Arial, sans-serif;
+    line-height: 1.4;
+    color: #1a1a1a; /* Hitam pekat */
+    max-width: 900px;
     margin: auto;
+    padding: 20px;
 }
+
+/* Nama - Biru Corporate */
 h1 {
-    text-align: center;
-    color: #2c3e50;
-    border-bottom: 2px solid #2c3e50;
-    padding-bottom: 10px;
-}
-h2 {
-    color: #2980b9;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
-    margin-top: 20px;
-}
-h3 {
-    color: #34495e;
+    text-align: left;
+    color: #004a99; /* Biru Resume Lama */
+    font-size: 28px;
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
+
+/* Contact Info */
+p {
+    margin: 2px 0;
+    font-size: 11px;
+    color: #333;
+}
+
+/* Tajuk Seksyen - Biru + Border */
+h2 {
+    color: #004a99;
+    font-size: 16px;
+    border-bottom: 1.5px solid #004a99;
+    padding-bottom: 3px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* Nama Projek/Jawatan - Hitam Bold */
+h3 {
+    color: #1a1a1a;
+    font-size: 13px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+/* Isi Kandungan */
 ul {
     margin-top: 5px;
+    padding-left: 20px;
 }
+
 li {
-    margin-bottom: 3px;
+    font-size: 11.5px;
+    margin-bottom: 4px;
+    text-align: justify;
+}
+
+/* Link - Biru */
+a {
+    color: #004a99;
+    text-decoration: none;
 }
 </style>
 
