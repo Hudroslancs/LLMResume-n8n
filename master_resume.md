@@ -1,4 +1,8 @@
 <style>
+@page {
+    margin-top: 10mm; /* Jarak standard margin atas kertas */
+    margin-bottom: 10mm;
+}
 /* Font import professional vibe */
 @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
 
@@ -8,7 +12,7 @@ body {
     color: #1a1a1a; /* Hitam pekat untuk teks */
     max-width: 900px;
     margin: auto;
-    padding: 20px 50px;
+    padding: 5px 50px 20px 50px;
 }
 
 /* Nama - Biru Corporate (Gold Standard Size) */
