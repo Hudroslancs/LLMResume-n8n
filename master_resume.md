@@ -89,15 +89,21 @@ Kuala Lumpur, Malaysia | +601121917499 | hudroslan@gmail.com
 [GitHub](https://github.com/Hudroslancs) | [LinkedIn](https://www.linkedin.com/in/hudroslan/)
 
 ## CAREER OBJECTIVE
-Technical Support Engineer with 4+ years of experience in IT systems and software deployment. Currently pivoting into Cloud Infrastructure (AWS) and Cybersecurity (CEH) to deliver secure, automated, and scalable enterprise solutions.
+Technical Support Engineer with 5+ years of experience in IT systems and software deployment. Currently pivoting into Cloud Infrastructure (AWS) and Cybersecurity (CEH) to deliver secure, automated, and scalable enterprise solutions.
 
 ## TECHNICAL SKILLS
 - **Cloud & Virtualization:** AWS (S3, IAM, Lambda), Proxmox VE (LXC/VM), KVM.
-- **Automation & Development:** n8n (Self-hosted), Python (Flask), Bash Scripting, HTML/CSS (MM-based high-precision rendering).
-- **Networking & Security:** Tailscale (Zero-Trust Architecture), DICOM/PACS Networking, CEH (Penetration Testing, Kali Linux, Nmap, Metasploit).
-- **Specialized IT:** DICOM Protocol, Java RMI Troubleshooting, Service Dependency Management.
+- **Automation & Development:** n8n (Self-hosted), Python (Flask), Bash Scripting, HTML/CSS (High-precision rendering).
+- **Networking & Security:** Cloudflare Zero Trust (Access/Tunnels), Tailscale, DICOM/PACS Networking, CEH (Penetration Testing, Kali Linux).
+- **Specialized IT:** Gotenberg (API-based PDF Engine), DICOM Protocol, Java RMI Troubleshooting, Service Dependency Management.
 
 ## KEY PROJECTS
+
+### AI-Powered Resume Factory (Home Lab Automation)
+- Architected a self-hosted automation engine using **n8n** running on a **Proxmox** infrastructure, exposed securely via **Cloudflare Zero Trust (Tunnels)**.
+- Integrated **Llama3 (Ollama)** via API to perform real-time Job Description (JD) analysis and dynamic resume tailoring.
+- Developed a multi-stage conversion pipeline: Markdown to HTML, and high-fidelity PDF generation using **Gotenberg** (Chromium-based engine).
+- Automated the delivery system to **Telegram** bot for instantaneous retrieval of tailored resumes in a mobile-first environment.
 
 ### Digital Jobsheet System (Full-Stack & Security)
 - Developed a production-ready internal web application using **Python (Flask)** to digitize manual paper-based engineering workflows.
@@ -109,40 +115,27 @@ Technical Support Engineer with 4+ years of experience in IT systems and softwar
 - Resolved complex technical bottlenecks involving DICOM ports (104, 204) and **Java RMI (Port 1099)** service dependencies on Romexis servers.
 - Managed network configurations (Static IP, VLANs, Gateways) to ensure zero data loss during critical system transitions.
 
-### AI-Powered Resume Factory (Home Lab Automation)
-- Architected a self-hosted automation engine using **n8n** running on a **Proxmox** infrastructure.
-- Integrated **Llama3 (Ollama)** to perform automated Job Description (JD) analysis and dynamic resume tailoring.
-
 ## PROFESSIONAL EXPERIENCE
 
 ### IT Support Engineer | Amedix Sdn Bhd (2020 - Present)
 - Specialist in PACS/DICOM system integration and medical imaging infrastructure maintenance.
 - Coordinated secure networking across 6 MINDEF sites for encrypted DICOM data sharing.
-- Supported and maintained PACS and DICOM-based dental imaging systems across clinics nationwide.
 - Installed, configured, and troubleshot X-ray machines, imaging workstations, and PACS servers.
 - Managed DICOM image transfer between modalities and servers, ensuring data integrity and system uptime.
 - Configured network settings, firewall rules, IP routing, and secure connectivity for clinical environments.
 - Implemented backup and recovery strategies to mitigate data loss for imaging systems.
 - Led the MINDEF Digital Lab Project, overseeing multi-site networking across six military camps to enable secure DICOM image sharing.
-- Provided end-user training to clinicians and technicians on imaging software and imaging workflows.
-- Acted as the primary technical point of contact for high-value medical imaging equipment issues.
-- Performed hardware repairs and corrective maintenance on equipment, including board replacements and post-repair functional testing.
 - Provided technical consultation on medical imaging system requirements and clinic layout in accordance with local healthcare authority guidelines.
 
 ### Product Designer | Luxbee Sdn Bhd (2019 - 2020)
-- Supported the preparation of 3D drawings, shop drawings, as-built drawings, and construction drawings for projects all over Malaysia
+- Supported the preparation of 3D drawings, shop drawings, and as-built drawings for various manufacturing projects.
 - Contributed to the design and manufacturing of factory stacking racks, optimizing space utilization and functionality.
-- Created a variety of media, including new Raya posters, company t-shirt designs, payment voucher forms, and delivery order forms.
-- Managed the creation and organization of Drawing Sent Records for the years 2019 and 2020.
-- Assisted in the development of 3D house layouts for clients, enhancing visualization and planning
+- Created a variety of media, including posters, company t-shirt designs, and payment voucher/delivery order forms.
 
 ### Structural Design Engineer | Galaxy Aerospace Malaysia (2017)
-- Supported various CAMO activities, including Planning, Technical Records, Publication, Technical Services, and Airworthiness Review.
-- Assisted in the review and assessment of Airworthiness Directives (AD) and Service Bulletins (SB) issued by manufacturers and aviation authorities.
-- Contributed to the design and fabrication of specialized tools for Airbus Helicopters and Agusta Westland models
-- Played a key role in the modification of the Bambi Bucket Removal system for Agusta Westland model AW 139 helicopters.
-- Participated in the redesign of seating for Beechcraft model King Air 350.
-- Assisted in the evaluation and implementation of Service Bulletins for Agusta Westland AW119 and AW139 helicopters.
+- Supported various CAMO activities, including Planning, Technical Records, and Airworthiness Review assessment (AD/SB).
+- Contributed to the design and fabrication of specialized tools for Airbus Helicopters and Agusta Westland models.
+- Played a key role in the modification of the Bambi Bucket Removal system for Agusta Westland AW139 helicopters.
 
 ## CERTIFICATIONS
 - **AWS Certified Cloud Practitioner** (AWS)
