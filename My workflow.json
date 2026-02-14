@@ -1,0 +1,257 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -112,
+        0
+      ],
+      "id": "87d241b6-843a-4a80-b427-9c9aeef2ef97",
+      "name": "Telegram Trigger",
+      "webhookId": "d2eeb1cb-efac-454a-9172-6836cbf4c259",
+      "credentials": {
+        "telegramApi": {
+          "id": "jGcNn6Xovg2uz1Bz",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/Hudroslancs/LLMResume-n8n/refs/heads/main/master_resume.md",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        192,
+        0
+      ],
+      "id": "82957594-e92e-4299-bb85-ae708e88dac7",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=MASTER RESUME:\n{{ $node[\"HTTP Request\"].json.data }}\n\nJOB DESCRIPTION:\n{{ $json[\"input\"] }}\n\nINSTRUCTION:\nPlease rewrite my resume to match the Job Description above. \nKeep the exact same Markdown style and CSS. \nBe concise, use professional English, and focus on my technical impact in Cloud and Security. \nDo not add any conversational filler, just output the Markdown code.",
+        "options": {
+          "systemMessage": "You are a Senior Technical Recruiter specializing in DevOps, DevSecOps, Cloud and Security.\nYour goal is to optimize the provided resume for both ATS and human readability. \nUse simplify, action-oriented language. \nNever invent facts. \nAlways maintain the original Markdown formatting and CSS styles.\nOnly output the Markdown code without any introductory text."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        448,
+        -160
+      ],
+      "id": "6af08436-6d21-4d03-a73b-5eea3fa5439d",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "llama3:latest",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        448,
+        240
+      ],
+      "id": "008ad721-2916-4bff-9b5e-953797151699",
+      "name": "Ollama Chat Model",
+      "credentials": {
+        "ollamaApi": {
+          "id": "bQJ1uBK3QfruibCD",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "markdownToHtml",
+        "markdown": "={{ $json.output }}",
+        "destinationKey": "html",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        800,
+        -32
+      ],
+      "id": "5c30b18b-0e01-4ea6-96df-a940ca5ae2ec",
+      "name": "Markdown"
+    },
+    {
+      "parameters": {
+        "jsCode": "const html = $input.first().json.html || \"<h1>No Content</h1>\";\n\nreturn [\n  {\n    json: {},\n    binary: {\n      data: await this.helpers.prepareBinaryData(\n        Buffer.from(html),\n        'index.html',\n        'text/html'\n      )\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1104,
+        -32
+      ],
+      "id": "7a101a8d-8697-4e05-aee6-f724edad17b3",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://100.115.65.13:3000/forms/chromium/convert/html",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "files",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1408,
+        -32
+      ],
+      "id": "bf116d15-e46d-4f90-86ee-c72e98504240",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "operation": "sendDocument",
+        "chatId": "626826030",
+        "binaryData": true,
+        "additionalFields": {
+          "caption": "Resume test"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1616,
+        -32
+      ],
+      "id": "6316a62b-f511-4b8c-b5a0-02159da102fb",
+      "name": "Send a document",
+      "webhookId": "6ecf1b0b-060b-4f1b-82a1-a0a665b8c854",
+      "credentials": {
+        "telegramApi": {
+          "id": "jGcNn6Xovg2uz1Bz",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Markdown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Markdown": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Send a document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "eb0e05bb-17dc-44ad-80be-e78ca765abd1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "b132bbe8e1ccdb01285bbd999748a19bb7f8a91bea8d80c9a0340c111cfc24fe"
+  },
+  "id": "WSTb6yLO4a-vvJN8GcGfl",
+  "tags": []
+}
