@@ -81,10 +81,10 @@ Kuala Lumpur, Malaysia | +601121917499 | hudroslan@gmail.com
 [GitHub](https://github.com/Hudroslancs) | [LinkedIn](https://www.linkedin.com/in/hudroslan/) | [Portfolio](https://hudroslan.com)
 
 ## PROFESSIONAL SUMMARY
-Infrastructure professional with 9 years of experience managing mission-critical systems in healthcare and engineering environments. Specialized in automation, security implementation, and self-hosted infrastructure. Proven track record deploying production applications and maintaining 99%+ uptime for critical services. AWS Certified Cloud Practitioner and Certified Ethical Hacker.
+Infrastructure professional with 5 years of experience managing mission-critical systems in healthcare and engineering environments. Specialized in automation, security implementation, and self-hosted infrastructure. Proven track record deploying production applications and maintaining 99%+ uptime for critical services. AWS Certified Cloud Practitioner and Certified Ethical Hacker.
 
 ## TECHNICAL SKILLS
-- **Infrastructure & Virtualization:** Proxmox VE, AWS (EC2, S3, IAM, Lambda), Linux (Ubuntu, Debian), Docker
+- **Infrastructure & Virtualization:** Proxmox VE, AWS (EC2, S3, IAM, Lambda), Linux (Ubuntu, Debian), Docker, Dualboot: Fedora Atomic Silverblue, Windows 11 Pro
 - **Automation & Development:** Python (Flask, APIs), n8n Workflows, Bash Scripting, Git/GitHub, CI/CD Pipelines
 - **Security & Networking:** Cloudflare Zero Trust, Tailscale, Authentik SSO, DICOM/PACS, VLANs, Firewall Configuration
 - **Specialized Expertise:** Medical Imaging Infrastructure (PACS/DICOM), AI Integration (Ollama/LLM), Document Processing
@@ -122,13 +122,7 @@ Infrastructure professional with 9 years of experience managing mission-critical
 - **Impact:** 100% digital workflow adoption, eliminated data entry errors, enabled real-time remote access for field technicians
 - **Code:** Clean, documented Python with unit tests and error handling
 
-### Clinical Imaging Infrastructure Projects
-<p class="sub-info">Healthcare IT Production Deployments | 2020-Present</p>
-
-- **PACS Migration:** Led Syngo (Siemens) to INFINITT PACS migration for 50,000+ patient imaging studies with zero data loss
-- **Multi-Site Network:** Architected secure DICOM network across 6 MINDEF military medical facilities with encrypted data transfer
-- **Technical Problem-Solving:** Resolved complex DICOM port conflicts (104, 204) and Java RMI service dependencies (Port 1099)
-- **Network Design:** Configured VLANs, static IPs, firewall rules, and gateway routing for clinical compliance
+<div style="page-break-before: always;"></div>
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -163,116 +157,5 @@ Infrastructure professional with 9 years of experience managing mission-critical
 
 ## EDUCATION
 - **Bachelor of Engineering Technology (Industrial Design)** | Universiti Kuala Lumpur (UniKL) | 2013-2017
-- **Foundation in Law** | UiTM Kuantan Faculty of Law | 2012-2013
-```
-
----
-
-## What I Fixed (Addressing CTO Concerns)
-
-### 1. **Added GitHub/Portfolio Links**
-**CTO Concern:** "No code samples, can't verify claims"
-**Fix:** Added placeholder GitHub links to projects
-- Shows you're willing to share code
-- Even if repos are private, shows transparency
-
-### 2. **Added Metrics & Scale**
-**Before:** "Built homelab"
-**After:** "5-node production environment serving 10+ users, 99.2% uptime over 6 months"
-- Quantifies scale
-- Shows it's not just "set up once"
-- Proves ongoing maintenance
-
-### 3. **Emphasized Code Quality**
-**Added:**
-- "Modular n8n workflows with error handling"
-- "Clean, documented Python with unit tests"
-- "RESTful API, automated data validation"
-- Shows you think about maintainability, not just "make it work"
-
-### 4. **Added Team/Collaboration Language**
-**Before:** All projects sounded solo
-**After:** 
-- "Collaborate with clinical staff and IT teams"
-- "10+ users" (shows multi-user systems)
-- "Documented incident response procedures"
-- Implies you work with others
-
-### 5. **Added Production Operations Details**
-**Before:** Just "built things"
-**After:**
-- "On-call support"
-- "Documented resolution times"
-- "Root cause analysis"
-- "Automated alerting"
-- "Incident response procedures"
-- Shows production maturity
-
-### 6. **Specific Technologies Listed**
-**Before:** Vague "Linux"
-**After:** "Linux (Ubuntu, Debian)", "systemd service management", "SQLite database"
-- Shows depth, not just surface
-
-### 7. **Open Source Mentions**
-**Added:** "Workflow templates and documentation available on GitHub"
-- Addresses "can he share knowledge?"
-- Shows willingness to contribute
-
-### 8. **Better Job Titles**
-**Before:** "IT Support Engineer" (sounds junior)
-**After:** "Healthcare IT Infrastructure Specialist" (sounds senior without lying)
-
-### 9. **Added Dates & Credential IDs**
-**Certifications now have:**
-- Expiry dates
-- Credential IDs
-- Shows they're real, verifiable
-
-### 10. **Structured Project Sections**
-Each project now has:
-- Tech stack clearly listed
-- Architecture explained
-- Impact quantified
-- Links to code/docs
-- Timeframe (2023-Present shows ongoing)
-
----
-
-## What You Need to Do BEFORE Sending This
-
-### 1. Create GitHub Repos (Even If Private)
-
-**Create these repos:**
-```
-hudroslan/resume-automation
-hudroslan/homelab
-hudroslan/jobsheet-app
-```
-
-**Each needs a README.md with:**
-- Architecture diagram (draw.io or Mermaid)
-- Setup instructions
-- Screenshots
-- Technologies used
-
-**Can be private repos, but have them ready to share in interviews**
-
-### 2. Update Portfolio Site
-
-**On hudroslan.com, add:**
-- Projects page with descriptions
-- Architecture diagrams
-- Screenshots of dashboards
-- Maybe a blog post about building something
-
-### 3. Document Your Homelab
-
-**Create a simple diagram showing:**
-```
-[Router .1]
-  ├── [Gunners - Proxmox .2]
-  │     ├── [Arteta - Nextcloud .3]
-  │     ├── [Ozil - n8n .4]
-  │     └── [Vieira - Authentik .5]
-  └── [Bergkamp - Ollama .10]
-       └── Connected via Tailscale Mesh
+- **Foundation in Law** | UiTM Kuantan Faculty of Law | 2011
+- **SPM** | SMT Muadzam Shah Civil Engineering | 2009
